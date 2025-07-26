@@ -1,7 +1,7 @@
-From ID,From Type,To ID,To Type,Edge Type
-user_user1,user,post_1774370864,post,authored
-post_1774370864,post,user_user2,user,viewed
-user_user1,user,post_164643203,post,authored
-post_164643203,post,user_user3,user,viewed
-user_user2,user,post_1502938511,post,authored
-post_1502938511,post,user_user1,user,viewed
+Source,Target,Label
+user_user1,post_1774370864,authored
+post_1774370864,user_user2,viewed
+user_user1,post_164643203,authored
+post_164643203,user_user3,viewed
+user_user2,post_1502938511,authored
+post_1502938511,user_user1,viewed
