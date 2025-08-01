@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.*;
 
 public class Main {
@@ -35,19 +34,18 @@ public class Main {
             System.out.println("- " + u.username);
         }
 
-        try {
-            CSVExporter.exportForGephi(users, interestingUsers);
-        } catch (IOException e) {
-            System.err.println("Error exporting CSVs: " + e.getMessage());
-        }
-
         // word cloud test
         List<Post> allPosts = new ArrayList<>(); // get all posts from users
         for (User u : users) {
             allPosts.addAll(u.posts);
         }
+
         // create word frequency map with no filters (null)
         Map<String, Integer> frequencyMap = WordCloud.wordCloudGenerator(allPosts, null, null, null);
         WordCloud.topWords(frequencyMap, 5); // print top 5 frequently used words
+        }
+
     }
-}
+
+    
+    
